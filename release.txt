@@ -1,0 +1,18 @@
+For project committers
+
+Packaging a release:
+
+- update version number in
+	- pom.xml
+	- build.xml
+
+- ensure that you have pgp installed and that you create own keys (see
+https://docs.sonatype.org/display/Repository/How+To+Generate+PGP+Signatures+With+Maven)
+
+- call ant bundle
+
+- upload target/bundle.jar to
+https://oss.sonatype.org/index.html#staging-upload
+with Upload Mode: Artifact Bundle
+
+- go to https://oss.sonatype.org/index.html#stagingRepositories and release the repository 
